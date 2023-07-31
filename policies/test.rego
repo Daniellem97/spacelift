@@ -7,7 +7,7 @@ login   := input.session.login
 admin { admins[login] }
 allow { allowed[login] }
 
-deny  { not admin; not allow }
+deny  { not admin; not allow }}
 
 # As input, login policies receive a JSON document like this:
 #
