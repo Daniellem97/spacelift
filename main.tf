@@ -8,6 +8,6 @@ resource "spacelift_stack" "ec2-stack" {
   branch       = "main"
   description  = "AWS EC2 Instance and Networking"
   name         = "development-stack"
-  repository   = "testtf"
+  repository   = "tftest"
   terraform_version = "1.5.0"
 }
