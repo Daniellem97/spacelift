@@ -1,7 +1,7 @@
 resource "spacelift_stack" "ec2-stack" {
 
   github_enterprise {
-    namespace = "daniellem97"
+    namespace = "Daniellem97"
   }
 
   autodeploy   = false
