@@ -9,12 +9,6 @@ allow { allowed[login] }
 
 deny  { not admin; not allow }
 
-# 🦕 Feel free to remove commented code once your policy is ready. 🦕
-#
-# Login policies can allow users to log in to the account, and optionally give
-# them admin privileges, too. They affect all users in the account except for
-# GitHub organization admins and private account owners.
-#
 # As input, login policies receive a JSON document like this:
 #
 # {
