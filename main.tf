@@ -7,3 +7,10 @@ resource "spacelift_stack" "ec2-stack" {
   repository   = "tftest"
   terraform_version = "1.5.0"
 }
+
+resource "spacelift_policy" "admin_login" {
+  name     = "Admin Login Policy"
+  body     = "package spacelift"
+  space_id = "root"
+  type     = "LOGIN"
+}
