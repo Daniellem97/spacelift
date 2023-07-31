@@ -10,7 +10,7 @@ resource "spacelift_stack" "ec2-stack" {
 
 resource "spacelift_policy" "admin_login" {
   name     = "Admin Login Policy"
-  body     = "package spacelift"
+  body     = "package spacelift /n sample {true}"
   space_id = "root"
   type     = "LOGIN"
 }
