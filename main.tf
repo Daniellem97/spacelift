@@ -10,7 +10,7 @@ resource "spacelift_stack" "ec2-stack" {
 
 resource "spacelift_policy" "admin_login" {
   name     = "Admin Login Policy"
-  body     = "package spacelift /n sample {true}"
+  body     = file("policies/test.rego")
   space_id = "root"
   type     = "LOGIN"
 }
