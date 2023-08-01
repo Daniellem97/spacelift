@@ -4,3 +4,4 @@ resource "spacelift_policy" "admin_login" {
   space_id = "root"
   type     = "LOGIN"
 }
+
