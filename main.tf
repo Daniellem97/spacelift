@@ -6,3 +6,7 @@ resource "spacelift_stack" "ec2-stack" {
   name         = "development-stack"
   repository   = "tftest"
 }
+
+data "spacelift_gcp_service_account" "k8s-core" {
+  stack_id = "k8s-core"
+}
