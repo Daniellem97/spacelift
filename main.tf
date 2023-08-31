@@ -5,8 +5,6 @@ resource "spacelift_stack" "ec2-stack" {
   description  = "AWS EC2 Instance and Networking"
   name         = "development-stack"
   repository   = "tftest"
+  space        = "legacy"
 }
 
-data "spacelift_gcp_service_account" "privateaws" {
-  stack_id = "privateaws"
-}
