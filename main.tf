@@ -8,3 +8,7 @@ resource "spacelift_stack" "ec2-stack" {
   space_id        = "legacyi"
 }
 
+output "spacelift_ec2_stack_space_id" {
+  value = spacelift_stack.ec2-stack.space_id
+  description = "The space_id of the spacelift_stack ec2-stack"
+}
