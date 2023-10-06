@@ -15,4 +15,5 @@ resource "spacelift_module" "k8s-module" {
   branch             = "main"
   description        = "Infra terraform module"
   repository         = "testmultimodule"
+  project_root       ="multimodule-main 2/uuid"
 }
