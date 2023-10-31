@@ -22,5 +22,5 @@ resource "spacelift_environment_variable" "core-kubeconfig" {
   stack_id   = "development-stack"
   name       = "KUBECONFIG"
   value      = "/project/spacelift/kubeconfig"
-  write_only = false
+  write_only = true
 }
