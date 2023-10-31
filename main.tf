@@ -17,3 +17,10 @@ resource "spacelift_module" "k8s-module" {
   repository         = "testmultimodule"
   project_root       ="multimodule-main 2/uuid"
 }
+
+resource "spacelift_environment_variable" "core-kubeconfig" {
+  stack_id   = "development-stack"
+  name       = "KUBECONFIG"
+  value      = "/project/spacelift/kubeconfig"
+  write_only = false
+}
