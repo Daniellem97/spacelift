@@ -28,7 +28,7 @@ resource "spacelift_environment_variable" "core-kubeconfig" {
 resource "spacelift_webhook" "webhook" {
   endpoint = "https://webhook.site/2ac4f85a-df59-4c94-a4e5-0d2ea40502dd"
   stack_id = "development-stack"
-  secret = "test2"
+  secret = "test3"
 }
 
 
