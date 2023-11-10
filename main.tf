@@ -6,7 +6,7 @@ resource "spacelift_stack" "ec2-stack" {
   name         = "development-stack"
   repository   = "tftest2"
   space_id        = "legacy"
-  terraform_version = "1.5.7"
+  terraform_version = "1.5.3"
 }
 
 
