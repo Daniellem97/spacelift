@@ -9,16 +9,6 @@ resource "spacelift_stack" "ec2-stack" {
   terraform_version = "1.5.7"
 }
 
-resource "spacelift_stack" "master" {
-
-  autodeploy   = false
-  branch       = "main"
-  description  = "AWS EC2 Instance and Networking"
-  name         = "master"
-  repository   = "spacelift"
-  space_id        = "legacy"
-  terraform_version = "1.5.7"
-}
 
 resource "spacelift_module" "k8s-module" {
   name               = "k8s-module"
