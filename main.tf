@@ -31,8 +31,15 @@ resource "spacelift_module" "k8s-module" {
 }
 
 resource "spacelift_context" "prod-k8s-ie" {
-  description = "Configuration details for the compute cluster in 🇮🇪"
   name        = "Production cluster (Ireland)"
+  description = "Configuration details for the compute cluster in Ireland"
+
+  before_init = [
+    "echo Setting up initial configuration..."
+  ]
+
+  // You can also include other hooks like after_apply, before_plan, etc.
+  after_apply = [
+    "echo Apply completed"
+  ]
 }
-
-
