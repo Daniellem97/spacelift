@@ -30,5 +30,9 @@ resource "spacelift_module" "k8s-module" {
   project_root       ="multimodule-main 2/uuid"
 }
 
+resource "spacelift_context" "prod-k8s-ie" {
+  description = "Configuration details for the compute cluster in 🇮🇪"
+  name        = "Production cluster (Ireland)"
+}
 
 
