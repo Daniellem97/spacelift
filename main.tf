@@ -30,7 +30,23 @@ resource "spacelift_module" "k8s-module" {
   project_root       ="multimodule-main 2/uuid"
 }
 
-resource "spacelift_context" "prod-k8s-ie" {
-  name        = "Production cluster (Ireland)"
+resource "spacelift_context" "a" {
+  name        = "b"
   description = "Configuration details for the compute cluster in Ireland"
+  labels = ["autoattach:*"]
+
+ before_init = [
+    "echo its slug"
+  ]
 }
+
+resource "spacelift_context" "b" {
+  name        = "a"
+  description = "Configuration details for the compute cluster in Ireland" 
+labels = ["autoattach:*"]
+
+  before_init = [
+    "echo its name"
+  ]
+}
+
