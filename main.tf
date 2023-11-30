@@ -10,7 +10,6 @@ resource "spacelift_stack" "ec2-stack" {
 }
 
 resource "spacelift_scheduled_task" "rotate_app_reg_password" {
-  stack_id = ec2-stack
-
+  stack_id = spacelift_stack.ec2-stack.id
   command = "terraform destroy -auto-approve"
 }
