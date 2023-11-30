@@ -9,44 +9,8 @@ resource "spacelift_stack" "ec2-stack" {
   terraform_version = "1.5.2"
 }
 
-resource "spacelift_stack" "ec2-stack2" {
+resource "spacelift_scheduled_task" "rotate_app_reg_password" {
+  stack_id = ec2-stack
 
-  autodeploy   = false
-  branch       = "main"
-  description  = "AWS EC2 Instance and Networking"
-  name         = "development-stack2"
-  repository   = "tftest"
-  space_id        = "legacy"
+  command = "terraform destroy -auto-approve"
 }
-
-
-resource "spacelift_module" "k8s-module" {
-  name               = "k8s-module"
-  terraform_provider = "aws"
-  administrative     = true
-  branch             = "main"
-  description        = "Infra terraform module"
-  repository         = "testmultimodule"
-  project_root       ="multimodule-main 2/uuid"
-}
-
-resource "spacelift_context" "a" {
-  name        = "b"
-  description = "Configuration details for the compute cluster in Ireland"
-  labels = ["autoattach:*"]
-
- before_init = [
-    "echo its slug"
-  ]
-}
-
-resource "spacelift_context" "b" {
-  name        = "a"
-  description = "Configuration details for the compute cluster in Ireland" 
-labels = ["autoattach:*"]
-
-  before_init = [
-    "echo its name"
-  ]
-}
-
