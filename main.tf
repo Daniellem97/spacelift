@@ -16,5 +16,5 @@ resource "spacelift_scheduled_task" "rotate_app_reg_password" {
 }
 
 output "dummy" {
-  value = "dummy1"
+  value = "dummychange"
 }
