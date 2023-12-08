@@ -14,3 +14,7 @@ resource "spacelift_scheduled_task" "rotate_app_reg_password" {
   command = "terraform destroy -auto-approve"
   every   = ["0 8 ? * 6"]
 }
+
+output "dummy" {
+  value = "dummy"
+}
