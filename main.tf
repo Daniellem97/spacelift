@@ -17,7 +17,7 @@ resource "spacelift_scheduled_task" "rotate_app_reg_password" {
 
 resource "spacelift_policy" "no-weekend-deploys" {
   name = "Let's not deploy any changes over the weekend"
-  body = file("${path.module}/policies/test.rego")
+  body = file("${path.module}/test.rego")
   type = "PLAN"
 }
 
