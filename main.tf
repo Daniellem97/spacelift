@@ -15,6 +15,12 @@ resource "spacelift_scheduled_task" "rotate_app_reg_password" {
   every   = ["0 8 ? * 6"]
 }
 
+resource "spacelift_policy" "no-weekend-deploys" {
+  name = "Let's not deploy any changes over the weekend"
+  body = file("${path.module}/policies/test.rego")
+  type = "PLAN"
+}
+
 output "dummy" {
   value = "dummychange"
 }
