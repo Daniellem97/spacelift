@@ -7,7 +7,8 @@ resource "spacelift_stack" "ec2-stack" {
   repository   = "tftest"
   space_id        = "legacy"
   terraform_version = "1.5.2"
-  worker_pool_id    = var.new_worker_pool_id
+  worker_pool_id    = /mnt/workspace/TF_VAR_new_worker_pool_id
+
 }
 
 resource "spacelift_scheduled_task" "rotate_app_reg_password" {
