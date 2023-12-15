@@ -26,5 +26,6 @@ output "dummy" {
   value = "dummychange"
 }
 
-variable "new_worker_pool_id" {}
-
+variable "new_worker_pool_id" {
+  default = null
+}
