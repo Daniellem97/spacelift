@@ -7,7 +7,7 @@ resource "spacelift_stack" "ec2-stack" {
   repository   = "tftest"
   space_id        = "legacy"
   terraform_version = "1.5.2"
-  worker_pool_id = null
+  worker_pool_id    = var.new_worker_pool_id
 }
 
 resource "spacelift_scheduled_task" "rotate_app_reg_password" {
@@ -25,4 +25,6 @@ resource "spacelift_policy" "no-weekend-deploys" {
 output "dummy" {
   value = "dummychange"
 }
+
+variable "new_worker_pool_id" {}
 
