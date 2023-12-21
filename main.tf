@@ -28,3 +28,17 @@ output "dummy" {
 }
 
 variable "new_worker_pool_id" {}
+
+locals {
+  map = {
+    foo = "bar"
+  }
+  list = []
+}
+
+resource "spacelift_environment_variable" "list_example" {
+  context_id = spacelift_context.example.id
+  name       = "list_example"
+  value      = jsonencode(local.list)
+  write_only = false
+}
