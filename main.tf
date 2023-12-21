@@ -37,7 +37,6 @@ locals {
 }
 
 resource "spacelift_environment_variable" "list_example" {
-  context_id = spacelift_context.example.id
   name       = "list_example"
   value      = jsonencode(local.list)
   write_only = false
