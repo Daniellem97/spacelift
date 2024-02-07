@@ -7,6 +7,7 @@ resource "spacelift_idp_group_mapping" "test" {
   }
 }
 
-data "spacelift_aws_integration" "testpublic11" {
-  integration_id = "01H1W12328PM15MNK00G9FHAVV"
+resource "spacelift_stack_dependency" "test" {
+  stack_id            = "debugtest"
+  depends_on_stack_id = "demo-stack"
 }
