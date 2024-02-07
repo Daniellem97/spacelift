@@ -8,5 +8,5 @@ resource "spacelift_idp_group_mapping" "test" {
 }
 
 data "spacelift_aws_integration" "testpulic" {
-  integration_id = "01H1W12328PM15MNK00G9FHAVV"
+  integration_id = "1H1W12328PM15MNK00G9FHAVV"
 }
