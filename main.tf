@@ -41,3 +41,4 @@ resource "spacelift_stack" "frontdoor_dev_02_routing" {
   branch                       = "main"
   description                  = "Stack for Frontdoor's dev/02_routing resources"
 
+}
