@@ -8,3 +8,22 @@ resource "spacelift_space" "development" {
   # An optional description of a space.
   description = "This a child of the root space. It contains all the resources common to the development infrastructure."
 }
+
+resource "spacelift_stack" "example_stack" {
+  branch     = "master"
+  name       = "Example Stack"
+  repository = "tftest"
+
+  // Optional fields for stack configuration
+  administrative    = true
+  autodeploy        = true
+  description       = "Example stack description"
+  project_root      = "path/to/your/project"
+  terraform_version = "0.14.11"
+
+
+  terragrunt {
+    terragrunt_version = "0.50.12"
+    terraform_version = "0.14.11"
+  }
+}
