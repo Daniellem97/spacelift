@@ -8,3 +8,8 @@ resource "spacelift_space" "development" {
   # An optional description of a space.
   description = "This a child of the root space. It contains all the resources common to the development infrastructure."
 }
+
+resource "random_password" "password_1" {
+  length  = 20
+  special = true
+}
