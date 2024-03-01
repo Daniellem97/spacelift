@@ -10,7 +10,7 @@ resource "spacelift_space" "development" {
 }
 
 resource "spacelift_stack" "example_stack" {
-  branch     = "master"
+  branch     = "main"
   name       = "Example Stack"
   repository = "tftest"
 
