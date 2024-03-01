@@ -20,3 +20,4 @@ resource "spacelift_stack" "example_stack" {
   description       = "Example stack description"
   project_root      = "path/to/your/project"
   terraform_version = "0.14.11"
+}
