@@ -30,7 +30,7 @@ resource "spacelift_stack" "metabase_test" {
 }
 
 data "spacelift_gitlab_integration" "this" {
-  id = "legacygitlabtest" # Optional: Specify the integration ID if not using the default
+  id = "legacygitlabtest" 
 }
 
 # Define the stack in Spacelift
@@ -62,6 +62,6 @@ resource "spacelift_stack" "testing3" {
   # GitHub Enterprise settings for the stack
   gitlab {
     namespace = "Daniellem97"
-    id = data.spacelift_gitlab_integration.this.id
+    id = data.spacelift_bitbucket_cloud_integration.this.id
   }
 }
