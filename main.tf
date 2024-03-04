@@ -40,7 +40,7 @@ resource "spacelift_stack" "testing" {
   branch            = "main"
   project_root      = "main.tf"
   terraform_version = "1.5.7"
-  space_id = "metabasetest-01HBRT2GZTJEVVA4APJDNTNSV1"
+  space_id = "legacy"
   # GitHub Enterprise settings for the stack
   github_enterprise {
     namespace = "Daniellem97" # The GitHub organization or user the repository belongs to
