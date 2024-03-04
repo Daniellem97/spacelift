@@ -14,20 +14,17 @@ resource "random_password" "password_1" {
   special = true
 }
 
-# Fetch details of the GitHub integration
-data "spacelift_github_integration" "this" {
-  integration_id = "legacy-test"
+# Fetch details of the default GitHub Enterprise integration
+data "spacelift_github_enterprise_integration" "github_enterprise_integration" {
+  id = "legacy-test" # Optional: Specify the integration ID if not using the default
 }
 
 # Define the stack in Spacelift
 resource "spacelift_stack" "metabase_test" {
-  # Use the GitHub integration ID for the VCS provider
-  vcs_provider_id    = data.spacelift_github_integration.this.id
-  branch             = "main" # The default branch of your repository
-  description        = "Stack for the Metabase Test project"
-  name               = "metabase-test"
-  project_root       = "path/to/metabase" # Specify the directory in your repo that contains the Terraform configuration
-  repository   = "tftest"
-  space_id        = "legacy"  
-  terraform_version  = "1.5.7" # Specify the Terraform version, e.g., "0.14.5"
+  name              = "metabase-test"
+  repository        = "tftest"
+  branch            = "main"
+  project_root      = "path/to/metabase"
+  terraform_version = "1.5.7"
+  space_id = "legacy"
 }
