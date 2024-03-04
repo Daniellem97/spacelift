@@ -23,8 +23,4 @@ resource "spacelift_stack" "metabase_test" {
   terraform_version = "1.5.7"
   space_id = "metabasetest2"
   # GitHub Enterprise settings for the stack
-  github_enterprise {
-    namespace = "Daniellem97" # The GitHub organization or user the repository belongs to
-    id = data.spacelift_github_enterprise_integration.this.id
-  }
 }
