@@ -53,7 +53,7 @@ data "spacelift_bitbucket_cloud_integration" "this" {
 }
 
 # Define the stack in Spacelift
-resource "spacelift_stack" "testing" {
+resource "spacelift_stack" "testing3" {
   name              = "blahblahblah"
   repository        = "testspacespecific"
   branch            = "main"
