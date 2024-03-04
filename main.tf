@@ -60,7 +60,7 @@ resource "spacelift_stack" "testing3" {
   terraform_version = "1.5.7"
   space_id = "metabasetest-01HBRT2GZTJEVVA4APJDNTNSV1"
   # GitHub Enterprise settings for the stack
-  gitlab {
+  bitbucket_cloud {
     namespace = "Daniellem97"
     id = data.spacelift_bitbucket_cloud_integration.this.id
   }
