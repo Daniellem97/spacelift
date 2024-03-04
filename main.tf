@@ -65,3 +65,4 @@ resource "spacelift_stack" "testing3" {
     namespace = "testspacespecific" # The Bitbucket Cloud workspace or team containing the repository
   }
 }
+}
