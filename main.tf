@@ -10,7 +10,7 @@ resource "spacelift_space" "development" {
 }
 
 # Fetch details of the default GitHub Enterprise integration
-data "spacelift_github_enterprise_integration" "github_enterprise_integration" {
+data "spacelift_github_enterprise_integration" "this" {
   id = "legacy-test" # Optional: Specify the integration ID if not using the default
 }
 
@@ -25,6 +25,6 @@ resource "spacelift_stack" "metabase_test" {
   # GitHub Enterprise settings for the stack
   github_enterprise {
     namespace = "Daniellem97" # The GitHub organization or user the repository belongs to
-    id = "legacy-test" # Optional: Specify if not using the default GitHub Enterprise integration
+    id = data.spacelift_bitbucket_datacenter_integration.this.id
   }
 }
