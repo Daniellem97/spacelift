@@ -25,6 +25,6 @@ resource "spacelift_stack" "metabase_test" {
   # GitHub Enterprise settings for the stack
   github_enterprise {
     namespace = "Daniellem97" # The GitHub organization or user the repository belongs to
-    id = data.spacelift_bitbucket_datacenter_integration.this.id
+    id = data.spacelift_github_enterprise_integration.this.id
   }
 }
