@@ -62,5 +62,6 @@ resource "spacelift_stack" "testing3" {
   # GitHub Enterprise settings for the stack
      bitbucket_cloud {
     namespace = "testspacespecific" # The Bitbucket Cloud workspace or team containing the repository
+    id = data.spacelift_bitbucket_cloud_integration.this.id
   }
 }
