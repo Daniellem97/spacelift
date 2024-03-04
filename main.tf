@@ -58,7 +58,7 @@ resource "spacelift_stack" "testing3" {
   repository        = "testspacespecific"
   branch            = "main"
   terraform_version = "1.5.7"
-  space_id = "metabasetest-01HBRT2GZTJEVVA4APJDNTNSV1"
+  space_id = "legacy"
   # GitHub Enterprise settings for the stack
      bitbucket_cloud {
     namespace = "testspacespecific" # The Bitbucket Cloud workspace or team containing the repository
