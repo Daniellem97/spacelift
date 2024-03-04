@@ -55,7 +55,7 @@ data "spacelift_bitbucket_cloud_integration" "this" {
 resource "spacelift_stack" "testing3" {
   name              = "blahblahblah"
   repository        = "moduletest"
-  branch            = "main"
+  branch            = "master"
   terraform_version = "1.5.7"
   space_id = "legacy"
   # GitHub Enterprise settings for the stack
