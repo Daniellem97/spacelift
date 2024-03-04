@@ -36,9 +36,8 @@ data "spacelift_gitlab_integration" "this" {
 # Define the stack in Spacelift
 resource "spacelift_stack" "testing" {
   name              = "gitlab-test"
-  repository        = "tf-spacelift"
+  repository        = "test"
   branch            = "main"
-  project_root      = "main.tf"
   terraform_version = "1.5.7"
   space_id = "legacy"
   # GitHub Enterprise settings for the stack
