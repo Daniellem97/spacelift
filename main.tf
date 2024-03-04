@@ -29,7 +29,7 @@ resource "spacelift_stack" "metabase_test" {
   }
 }
 
-data "spacelift_gitlab_integration" "gitlab_integration" {
+data "spacelift_gitlab_integration" "this" {
   id = "legacygitlabtest" # Optional: Specify the integration ID if not using the default
 }
 
