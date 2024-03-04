@@ -24,7 +24,7 @@ resource "spacelift_stack" "metabase_test" {
   space_id = "legacy"
   # GitHub Enterprise settings for the stack
   github_enterprise {
-    namespace = "your-github-enterprise-org" # The GitHub organization or user the repository belongs to
-    # id = "legacy-test" # Optional: Specify if not using the default GitHub Enterprise integration
+    namespace = "Daniellem97" # The GitHub organization or user the repository belongs to
+    id = "legacy-test" # Optional: Specify if not using the default GitHub Enterprise integration
   }
 }
