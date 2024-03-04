@@ -54,7 +54,7 @@ data "spacelift_bitbucket_cloud_integration" "this" {
 # Define the stack in Spacelift
 resource "spacelift_stack" "testing3" {
   name              = "blahblahblah"
-  repository        = "testspacespecific"
+  repository        = "moduletest"
   branch            = "main"
   terraform_version = "1.5.7"
   space_id = "legacy"
