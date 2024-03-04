@@ -42,8 +42,8 @@ resource "spacelift_stack" "testing" {
   terraform_version = "1.5.7"
   space_id = "legacy"
   # GitHub Enterprise settings for the stack
-  github_enterprise {
-    namespace = "Daniellem97" # The GitHub organization or user the repository belongs to
+  gitlab {
+    namespace = "Daniellem97"
     id = data.spacelift_gitlab_integration.this.id
   }
 }
