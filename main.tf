@@ -9,11 +9,6 @@ resource "spacelift_space" "development" {
   description = "This a child of the root space. It contains all the resources common to the development infrastructure."
 }
 
-resource "random_password" "password_1" {
-  length  = 20
-  special = true
-}
-
 # Fetch details of the default GitHub Enterprise integration
 data "spacelift_github_enterprise_integration" "github_enterprise_integration" {
   id = "legacy-test" # Optional: Specify the integration ID if not using the default
