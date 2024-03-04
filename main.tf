@@ -21,6 +21,6 @@ resource "spacelift_stack" "metabase_test" {
   branch            = "main"
   project_root      = "path/to/metabase"
   terraform_version = "1.5.7"
-  space_id = "metabasetest2"
+  space_id = "devx"
   # GitHub Enterprise settings for the stack
 }
