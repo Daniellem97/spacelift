@@ -1,10 +1,7 @@
 variable "labels" {
-  description = "Map of labels"
-  type        = map(string)
-  default     = {
     namespace = "foo-bar"
   }
-}
+
 
 resource "spacelift_module" "this" {
   name       = "terraform-default-multimodule2"
