@@ -2,7 +2,6 @@ resource "spacelift_stack" "this" {
   branch                  = "main"
   name                    = "that"
   repository              = "tftest"
-  space_id                = "root"
   terraform_version       = "1.6.1"
   terraform_workflow_tool = "OPEN_TOFU"
 
