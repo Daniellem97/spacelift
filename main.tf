@@ -2,7 +2,7 @@ resource "spacelift_stack" "this" {
   branch                  = "main"
   name                    = "that"
   repository              = "tftest"
-  space_id                = "root"
+  space_id                = "metabasetest2-01HR4MYZWE0APZGRDR21CCDB45"
   terraform_version       = "1.6.2"
   terraform_workflow_tool = "OPEN_TOFU"
 
