@@ -25,3 +25,7 @@ resource "spacelift_context_attachment" "attachment" {
 data "spacelift_worker_pool" "private" {
   worker_pool_id = "01HS1ZXJDZ2WQ4DPAVDJ7NSKYG"
 }
+
+resource "spacelift_worker_pool" "private" {
+  name        = "worker-pool"
+}
