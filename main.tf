@@ -18,5 +18,5 @@ resource "spacelift_context" "prod-k8s-ie" {
 
 data "spacelift_context_attachment" "production-cluster-ireland" {
   context_id = "production-cluster-ireland"
-  stack_id   = "apps-cluster"
+  stack_id   = "that"
 }
