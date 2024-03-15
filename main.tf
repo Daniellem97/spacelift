@@ -9,3 +9,8 @@ resource "spacelift_stack" "this" {
     "feature:add_plan_pr_comment"
   ]
 }
+
+resource "spacelift_context" "prod-k8s-ie" {
+  description = "Configuration details for the compute cluster in 🇮🇪"
+  name        = "Production cluster (Ireland)"
+}
