@@ -1,6 +1,7 @@
 resource "spacelift_stack" "this" {
   branch                  = "main"
   name                    = "that"
+  administrative          = "true"
   repository              = "tftest"
   terraform_version       = "1.6.1"
   terraform_workflow_tool = "OPEN_TOFU"
@@ -15,8 +16,4 @@ resource "spacelift_context" "prod-k8s-ie" {
   name        = "Production cluster (Ireland)"
 }
 
-data "spacelift_context_attachment" "production-cluster-ireland" {
-  context_id = "production-cluster-ireland"
-  stack_id   = "apps-cluster"
-}
 
