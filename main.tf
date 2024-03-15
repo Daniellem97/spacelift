@@ -15,3 +15,9 @@ resource "spacelift_context" "prod-k8s-ie" {
   name        = "Production cluster (Ireland)"
   space_id    = "root"
 }
+
+
+resource "spacelift_context_attachment" "attachment" {
+  context_id = "production-cluster-ireland"
+  stack_id   = "that"
+}
