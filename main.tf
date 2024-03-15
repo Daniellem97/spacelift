@@ -1,5 +1,6 @@
 resource "spacelift_stack" "this" {
   branch                  = "main"
+  administrative          = "true"
   name                    = "that"
   repository              = "tftest"
   terraform_version       = "1.6.1"
