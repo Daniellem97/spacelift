@@ -21,3 +21,11 @@ resource "spacelift_context_attachment" "attachment" {
   context_id = "production-cluster-ireland"
   stack_id   = "that"
 }
+
+data "spacelift_worker_pool" "private" {
+  worker_pool_id = "01HNK02PZAPP4YFH4C0JE2J8Y4"
+}
+
+resource "spacelift_worker_pool" "private" {
+  name        = "worker-pool"
+}
