@@ -12,7 +12,7 @@ resource "spacelift_stack" "this" {
 
 resource "spacelift_stack" "versiontest123" {
   branch                  = "main"
-  name                    = "that"
+  name                    = "versiontest"
   repository              = "tftest"
 
   labels = [
