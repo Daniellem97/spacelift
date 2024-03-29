@@ -40,3 +40,10 @@ data "spacelift_worker_pool" "private" {
 resource "spacelift_worker_pool" "private" {
   name        = "worker-pool"
 }
+
+resource "spacelift_environment_variable" "ireland-kubeconfig" {
+  context_id = "prod-k8s-ie"
+  name       = "KUBECONFIG"
+  value      = "/project/spacelift/kubeconfig"
+  write_only = false
+}
