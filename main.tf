@@ -5,7 +5,7 @@ resource "spacelift_environment_variable" "test" {
   write_only = false
 }
 
-resource "spacelift_stack" "this" {
+resource "spacelift_stack" "this1" {
   branch                  = "main"
   name                    = "that11"
   repository              = "tftest"
@@ -17,7 +17,7 @@ resource "spacelift_stack" "this" {
   ]
 }
 
-resource "spacelift_stack" "this" {
+resource "spacelift_stack" "this2" {
   branch                  = "main"
   name                    = "that10"
   repository              = "tftest"
@@ -29,7 +29,7 @@ resource "spacelift_stack" "this" {
   ]
 }
 
-resource "spacelift_stack" "this" {
+resource "spacelift_stack" "this3" {
   branch                  = "main"
   name                    = "that9"
   repository              = "tftest"
@@ -41,7 +41,7 @@ resource "spacelift_stack" "this" {
   ]
 }
 
-resource "spacelift_stack" "this" {
+resource "spacelift_stack" "this4" {
   branch                  = "main"
   name                    = "that8"
   repository              = "tftest"
@@ -53,7 +53,7 @@ resource "spacelift_stack" "this" {
   ]
 }
 
-resource "spacelift_stack" "this" {
+resource "spacelift_stack" "this5" {
   branch                  = "main"
   name                    = "that7"
   repository              = "tftest"
@@ -65,7 +65,7 @@ resource "spacelift_stack" "this" {
   ]
 }
 
-resource "spacelift_stack" "this" {
+resource "spacelift_stack" "this6" {
   branch                  = "main"
   name                    = "that6"
   repository              = "tftest"
@@ -77,7 +77,7 @@ resource "spacelift_stack" "this" {
   ]
 }
 
-resource "spacelift_stack" "this" {
+resource "spacelift_stack" "this7" {
   branch                  = "main5"
   name                    = "that"
   repository              = "tftest"
@@ -89,7 +89,7 @@ resource "spacelift_stack" "this" {
   ]
 }
 
-resource "spacelift_stack" "this" {
+resource "spacelift_stack" "this8" {
   branch                  = "main4"
   name                    = "that"
   repository              = "tftest"
@@ -101,7 +101,7 @@ resource "spacelift_stack" "this" {
   ]
 }
 
-resource "spacelift_stack" "this" {
+resource "spacelift_stack" "this9" {
   branch                  = "main3"
   name                    = "that"
   repository              = "tftest"
@@ -113,7 +113,7 @@ resource "spacelift_stack" "this" {
   ]
 }
 
-resource "spacelift_stack" "this" {
+resource "spacelift_stack" "this10" {
   branch                  = "main2"
   name                    = "that"
   repository              = "tftest"
@@ -125,7 +125,7 @@ resource "spacelift_stack" "this" {
   ]
 }
 
-resource "spacelift_stack" "this" {
+resource "spacelift_stack" "this11" {
   branch                  = "main"
   name                    = "that1"
   repository              = "tftest"
