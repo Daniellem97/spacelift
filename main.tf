@@ -4,3 +4,135 @@ resource "spacelift_environment_variable" "test" {
   value      = "test"
   write_only = false
 }
+
+resource "spacelift_stack" "this" {
+  branch                  = "main"
+  name                    = "that11"
+  repository              = "tftest"
+  terraform_version       = "1.6.1"
+  terraform_workflow_tool = "OPEN_TOFU"
+
+  labels = [
+    "feature:add_plan_pr_comment"
+  ]
+}
+
+resource "spacelift_stack" "this" {
+  branch                  = "main"
+  name                    = "that10"
+  repository              = "tftest"
+  terraform_version       = "1.6.1"
+  terraform_workflow_tool = "OPEN_TOFU"
+
+  labels = [
+    "feature:add_plan_pr_comment"
+  ]
+}
+
+resource "spacelift_stack" "this" {
+  branch                  = "main"
+  name                    = "that9"
+  repository              = "tftest"
+  terraform_version       = "1.6.1"
+  terraform_workflow_tool = "OPEN_TOFU"
+
+  labels = [
+    "feature:add_plan_pr_comment"
+  ]
+}
+
+resource "spacelift_stack" "this" {
+  branch                  = "main"
+  name                    = "that8"
+  repository              = "tftest"
+  terraform_version       = "1.6.1"
+  terraform_workflow_tool = "OPEN_TOFU"
+
+  labels = [
+    "feature:add_plan_pr_comment"
+  ]
+}
+
+resource "spacelift_stack" "this" {
+  branch                  = "main"
+  name                    = "that7"
+  repository              = "tftest"
+  terraform_version       = "1.6.1"
+  terraform_workflow_tool = "OPEN_TOFU"
+
+  labels = [
+    "feature:add_plan_pr_comment"
+  ]
+}
+
+resource "spacelift_stack" "this" {
+  branch                  = "main"
+  name                    = "that6"
+  repository              = "tftest"
+  terraform_version       = "1.6.1"
+  terraform_workflow_tool = "OPEN_TOFU"
+
+  labels = [
+    "feature:add_plan_pr_comment"
+  ]
+}
+
+resource "spacelift_stack" "this" {
+  branch                  = "main5"
+  name                    = "that"
+  repository              = "tftest"
+  terraform_version       = "1.6.1"
+  terraform_workflow_tool = "OPEN_TOFU"
+
+  labels = [
+    "feature:add_plan_pr_comment"
+  ]
+}
+
+resource "spacelift_stack" "this" {
+  branch                  = "main4"
+  name                    = "that"
+  repository              = "tftest"
+  terraform_version       = "1.6.1"
+  terraform_workflow_tool = "OPEN_TOFU"
+
+  labels = [
+    "feature:add_plan_pr_comment"
+  ]
+}
+
+resource "spacelift_stack" "this" {
+  branch                  = "main3"
+  name                    = "that"
+  repository              = "tftest"
+  terraform_version       = "1.6.1"
+  terraform_workflow_tool = "OPEN_TOFU"
+
+  labels = [
+    "feature:add_plan_pr_comment"
+  ]
+}
+
+resource "spacelift_stack" "this" {
+  branch                  = "main2"
+  name                    = "that"
+  repository              = "tftest"
+  terraform_version       = "1.6.1"
+  terraform_workflow_tool = "OPEN_TOFU"
+
+  labels = [
+    "feature:add_plan_pr_comment"
+  ]
+}
+
+resource "spacelift_stack" "this" {
+  branch                  = "main"
+  name                    = "that1"
+  repository              = "tftest"
+  terraform_version       = "1.6.1"
+  terraform_workflow_tool = "OPEN_TOFU"
+
+  labels = [
+    "feature:add_plan_pr_comment"
+  ]
+}
