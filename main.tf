@@ -78,8 +78,8 @@ resource "spacelift_stack" "this6" {
 }
 
 resource "spacelift_stack" "this7" {
-  branch                  = "main5"
-  name                    = "that"
+  branch                  = "main"
+  name                    = "that5"
   repository              = "tftest"
   terraform_version       = "1.6.1"
   terraform_workflow_tool = "OPEN_TOFU"
@@ -90,8 +90,8 @@ resource "spacelift_stack" "this7" {
 }
 
 resource "spacelift_stack" "this8" {
-  branch                  = "main4"
-  name                    = "that"
+  branch                  = "main"
+  name                    = "that4"
   repository              = "tftest"
   terraform_version       = "1.6.1"
   terraform_workflow_tool = "OPEN_TOFU"
@@ -102,8 +102,8 @@ resource "spacelift_stack" "this8" {
 }
 
 resource "spacelift_stack" "this9" {
-  branch                  = "main3"
-  name                    = "that"
+  branch                  = "main"
+  name                    = "that3"
   repository              = "tftest"
   terraform_version       = "1.6.1"
   terraform_workflow_tool = "OPEN_TOFU"
@@ -114,8 +114,8 @@ resource "spacelift_stack" "this9" {
 }
 
 resource "spacelift_stack" "this10" {
-  branch                  = "main2"
-  name                    = "that"
+  branch                  = "main"
+  name                    = "that2"
   repository              = "tftest"
   terraform_version       = "1.6.1"
   terraform_workflow_tool = "OPEN_TOFU"
