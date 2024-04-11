@@ -136,3 +136,8 @@ resource "spacelift_stack" "this11" {
     "feature:add_plan_pr_comment"
   ]
 }
+
+resource "spacelift_stack_dependency" "test" {
+  stack_id            = "that1"
+  depends_on_stack_id = "that2"
+}
