@@ -30,10 +30,6 @@ resource "spacelift_stack" "this3" {
   terraform_version       = "1.6.1"
   terraform_workflow_tool = "OPEN_TOFU"
 
-  labels = [
-    "feature:add_plan_pr_comment"
-  ]
-}
 
 resource "spacelift_stack" "this4" {
   branch                  = "main"
