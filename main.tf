@@ -8,7 +8,7 @@ resource "spacelift_environment_variable" "test" {
 resource "spacelift_stack" "this1" {
   branch                  = "main"
   name                    = "that11"
-  repository              = "tftest"
+  repository              = "TFtest"
   terraform_version       = "1.6.1"
   terraform_workflow_tool = "OPEN_TOFU"
 
