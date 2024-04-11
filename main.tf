@@ -115,7 +115,7 @@ resource "spacelift_stack" "this10" {
   ]
 }
 
-resource "spacelift_stack" "this10" {
+resource "spacelift_stack" "this11" {
   branch                  = "main"
   name                    = "that1"
   repository              = "tftest"
