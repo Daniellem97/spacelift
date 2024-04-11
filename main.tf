@@ -119,13 +119,6 @@ resource "spacelift_stack" "this10" {
   ]
 }
 
-resource "spacelift_stack" "this11" {
-  branch                  = "main"
-  name                    = "that1"
-  repository              = "tftest"
-  terraform_version       = "1.6.1"
-  terraform_workflow_tool = "OPEN_TOFU"
-
   labels = [
     "feature:add_plan_pr_comment"
   ]
