@@ -29,7 +29,7 @@ resource "spacelift_stack" "this3" {
   repository              = "tftest"
   terraform_version       = "1.6.1"
   terraform_workflow_tool = "OPEN_TOFU"
-
+}
 
 resource "spacelift_stack" "this4" {
   branch                  = "main"
@@ -115,10 +115,6 @@ resource "spacelift_stack" "this10" {
   ]
 }
 
-  labels = [
-    "feature:add_plan_pr_comment"
-  ]
-}
 
 resource "spacelift_stack_dependency" "test" {
   stack_id            = "that1"
