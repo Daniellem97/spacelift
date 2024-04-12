@@ -1,13 +1,13 @@
 resource "spacelift_stack" "infra" {
-  branch     = "master"
-  name       = "Infrastructure stack"
+  branch     = "main"
+  name       = "tftest"
   repository = "core-infra"
 }
 
 
 resource "spacelift_stack" "app" {
-  branch     = "master"
-  name       = "Application stack"
+  branch     = "main"
+  name       = "tftest"
   repository = "app"
 }
 
