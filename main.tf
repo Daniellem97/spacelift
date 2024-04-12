@@ -1,14 +1,14 @@
 resource "spacelift_stack" "infra" {
   branch     = "main"
   name       = "tftest"
-  repository = "core-infra"
+  repository = "tftest"
 }
 
 
 resource "spacelift_stack" "app" {
   branch     = "main"
   name       = "tftest"
-  repository = "app"
+  repository = "tftest"
 }
 
 resource "spacelift_stack_dependency" "test" {
