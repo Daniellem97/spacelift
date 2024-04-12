@@ -5,9 +5,9 @@ resource "spacelift_stack" "infra" {
 }
 
 
-resource "spacelift_stack" "app" {
+resource "spacelift_stack" "app1" {
   branch     = "main"
-  name       = "tftest"
+  name       = "tftest1"
   repository = "tftest"
 }
 
