@@ -16,7 +16,7 @@ resource "spacelift_stack_dependency" "test" {
   depends_on_stack_id = spacelift_stack.infra.id
 }
 
-resource "spacelift_module" "this" {
+resource "spacelift_module" "that" {
   repository            = "terraform-aws-module"
   branch                = "main"
   space_id              = "root"
