@@ -15,3 +15,10 @@ resource "spacelift_stack_dependency" "test" {
   stack_id            = spacelift_stack.app1.id
   depends_on_stack_id = spacelift_stack.infra.id
 }
+
+resource "spacelift_module" "this" {
+  repository            = "terraform-aws-module"
+  name                  = "testprovider"
+  branch                = "main"
+  space_id              = "root"
+}
