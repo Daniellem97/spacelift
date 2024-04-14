@@ -18,7 +18,6 @@ resource "spacelift_stack_dependency" "test" {
 
 resource "spacelift_module" "this" {
   repository            = "terraform-aws-module"
-  name                  = "testprovider"
   branch                = "main"
   space_id              = "root"
 }
