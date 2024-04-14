@@ -21,3 +21,13 @@ resource "spacelift_module" "that" {
   branch                = "main"
   space_id              = "root"
 }
+
+resource "spacelift_stack" "stacka" {
+  branch     = "master"
+  name       = "stacka"
+  repository = "addressbook"
+}
+
+import {
+  id = "stacka"
+}
