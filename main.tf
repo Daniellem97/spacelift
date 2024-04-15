@@ -47,14 +47,20 @@ locals {
   }])
 }
 
+resource "null_resource" "delay" {
+  triggers = {
+    "before" = "${timestamp()}"
+  }
+
+  provisioner "local-exec" {
+    command = "sleep 60"  # Sleeps for 60 seconds
+  }
+}
+
 resource "spacelift_stack_dependency" "stack-dep" {
   for_each            = { for k, v in local.STACK-DEP : k => v }
-  depends_on_stack_id = 
-  stack_id            = 
+  depends_on_stack_id = each.value["Src"]
+  stack_id            = each.value["Dst"]
 
-
-  depends_on = [
-    each.value["Src"]
-    each.value["Dst"]
-]
+  depends_on = [null_resource.delay]
 }
