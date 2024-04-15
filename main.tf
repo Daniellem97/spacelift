@@ -13,6 +13,6 @@ resource "spacelift_stack" "app1" {
 
 resource "spacelift_stack_dependency" "test" {
   stack_id            = spacelift_stack.app1.id
-  depends_on_stack_id = tftest
+  depends_on_stack_id = "tftest"
 }
 
