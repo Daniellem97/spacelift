@@ -17,6 +17,13 @@ resource "spacelift_stack" "frontend" {
 
 }
 
+resource "spacelift_drift_detection" "core-infra-production-drift-detection" {
+  reconcile = true
+  stack_id  = spacelift_stack.backend.id
+  schedule  = ["*/15 * * * *"] # Every 15 minutes
+  timezone = "UTC+1"
+}
+
 variable "SP_CT" {
   default = {
     SPACE_FAMILY   = "myproject"
