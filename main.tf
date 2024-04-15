@@ -49,7 +49,7 @@ locals {
 
 resource "spacelift_stack_dependency" "stack-dep" {
   for_each            = { for k, v in local.STACK-DEP : k => v }
-  depends_on_stack_id = each.value["Src"]
-  stack_id            = each.value["Dst"]
+  depends_on_stack_id = each.value["Src"].id
+  stack_id            = each.value["Dst"].id
 }
 
