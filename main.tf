@@ -1,13 +1,21 @@
 resource "spacelift_stack" "backend" {
-  name       = "Backend Stack"
-  stack_id   = lower(join("_", [var.SP_CT.SPACE_FAMILY, var.SP_CT.SPACE_NAME, replace(var.SP_CT.SPACE_VERSION, ".", "-"), "backend"]))
-  // Add other necessary configurations and parameters
+
+  branch            = "main"
+  project_root      = "cluster"
+  repository        = "tftest"
+  terraform_version = "1.3.0"
+
 }
 
 resource "spacelift_stack" "frontend" {
   name       = "Frontend Stack"
-  stack_id   = lower(join("_", [var.SP_CT.SPACE_FAMILY, var.SP_CT.SPACE_NAME, replace(var.SP_CT.SPACE_VERSION, ".", "-"), "frontend"]))
-  // Add other necessary configurations and parameters
+  branch            = "main"
+  description       = "Provisions a Kubernetes cluster"
+  name              = "Kubernetes Cluster"
+  project_root      = "cluster"
+  repository        = "tftest"
+  terraform_version = "1.3.0"
+
 }
 
 variable "SP_CT" {
