@@ -11,7 +11,6 @@ resource "spacelift_stack" "frontend" {
   name       = "frontend"
   branch            = "main"
   description       = "Provisions a Kubernetes cluster"
-  name              = "Kubernetes Cluster"
   project_root      = "cluster"
   repository        = "tftest"
   terraform_version = "1.3.0"
