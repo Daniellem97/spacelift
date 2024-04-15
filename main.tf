@@ -21,7 +21,7 @@ resource "spacelift_drift_detection" "core-infra-production-drift-detection" {
   reconcile = true
   stack_id  = spacelift_stack.backend.id
   schedule  = ["*/15 * * * *"] # Every 15 minutes
-  timezone = "BST"
+  timezone = "CET"
 }
 
 variable "SP_CT" {
