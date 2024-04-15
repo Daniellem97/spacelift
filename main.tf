@@ -1,14 +1,13 @@
-resource "spacelift_stack" "infra" {
-  branch     = "main"
-  name       = "tftest"
-  repository = "tftest"
+resource "spacelift_stack" "backend" {
+  name       = "Backend Stack"
+  stack_id   = lower(join("_", [var.SP_CT.SPACE_FAMILY, var.SP_CT.SPACE_NAME, replace(var.SP_CT.SPACE_VERSION, ".", "-"), "backend"]))
+  // Add other necessary configurations and parameters
 }
 
-
-resource "spacelift_stack" "app1" {
-  branch     = "main"
-  name       = "tftest1"
-  repository = "tftest"
+resource "spacelift_stack" "frontend" {
+  name       = "Frontend Stack"
+  stack_id   = lower(join("_", [var.SP_CT.SPACE_FAMILY, var.SP_CT.SPACE_NAME, replace(var.SP_CT.SPACE_VERSION, ".", "-"), "frontend"]))
+  // Add other necessary configurations and parameters
 }
 
 variable "SP_CT" {
