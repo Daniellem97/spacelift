@@ -1,5 +1,5 @@
 resource "spacelift_stack" "backend" {
-  name              = "backend"
+  name = "myproject_production_1-backend"
   branch            = "main"
   project_root      = "cluster"
   repository        = "tftest"
@@ -8,7 +8,7 @@ resource "spacelift_stack" "backend" {
 }
 
 resource "spacelift_stack" "frontend" {
-  name       = "frontend"
+  name       = "myproject_production_1-0_frontend"
   branch            = "main"
   description       = "Provisions a Kubernetes cluster"
   project_root      = "cluster"
