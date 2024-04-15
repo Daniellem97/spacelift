@@ -1,5 +1,5 @@
 resource "spacelift_stack" "backend" {
-  name = "myproject_production_1-backend"
+  name = "myproject_production_1-0_backend"
   branch            = "main"
   project_root      = "cluster"
   repository        = "tftest"
