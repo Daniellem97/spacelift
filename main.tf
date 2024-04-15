@@ -34,7 +34,7 @@ resource "spacelift_stack" "k8s-core-kubernetes" {
   name         = "Kubernetes core services"
   project_root = "core-services"
   repository   = "tftest"
-  terraform_workflow_tool  = "CUSTOM"
+  workflow_tool  = "CUSTOM"
 
   # You can use hooks to authenticate with your cluster
   before_init = ["aws eks update-kubeconfig --region us-east-2 --name k8s-cluster"]
