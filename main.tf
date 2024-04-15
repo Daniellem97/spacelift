@@ -15,7 +15,7 @@ locals {
   STACK-DEP = {
     "infra_depends_on_app1" = {
       Src = spacelift_stack.infra.id
-      DST = spacelift_stack.app.id
+      DST = spacelift_stack.app1.id
     }
   }
 }
