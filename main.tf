@@ -12,7 +12,7 @@ resource "spacelift_stack" "app1" {
 }
 
 resource "spacelift_stack_dependency" "test" {
-  stack_id            = spacelift_stack.app1.id
+  stack_id            = "tftest1"
   depends_on_stack_id = "tftest"
 }
 
