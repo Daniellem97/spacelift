@@ -11,8 +11,17 @@ resource "spacelift_stack" "app1" {
   repository = "tftest"
 }
 
-resource "spacelift_stack_dependency" "test" {
- stack_id            = spacelift_stack.app1.id
- depends_on_stack_id = spacelift_stack.infra.id
+locals {
+  STACK-DEP = {
+    "infra_depends_on_app1" = {
+      Src = spacelift_stack.infra.id
+      DST = spacelift_stack.app.id
+    }
+  }
 }
 
+resource "spacelift_stack_dependency" "stack-dep" {
+  for_each            = { for k, v in local.STACK-DEP : k => v }
+  depends_on_stack_id = each.value["Src"]
+  stack_id            = each.value["DST"]
+}
