@@ -17,13 +17,6 @@ resource "spacelift_stack" "frontend" {
 
 }
 
-resource "spacelift_drift_detection" "core-infra-production-drift-detection" {
-  reconcile = true
-  stack_id  = spacelift_stack.backend.id
-  schedule  = ["*/15 * * * *"] # Every 15 minutes
-  timezone = "Europe/London"
-}
-
 variable "SP_CT" {
   default = {
     SPACE_FAMILY   = "myproject"
@@ -56,7 +49,12 @@ locals {
 
 resource "spacelift_stack_dependency" "stack-dep" {
   for_each            = { for k, v in local.STACK-DEP : k => v }
-  depends_on_stack_id = each.value["Src"]
-  stack_id            = each.value["Dst"]
-}
+  depends_on_stack_id = 
+  stack_id            = 
 
+
+  depends_on = [
+    each.value["Src"]
+    each.value["Dst"]
+]
+}
