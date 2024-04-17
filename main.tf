@@ -12,7 +12,7 @@ resource "spacelift_stack" "frontend" {
   name       = "myproject_production_1-0_frontend"
   branch            = "main"
   space_id          = "root"
-  description       = "Provisions a Kubernetes cluster"
+  description       = "change"
   project_root      = "cluster"
   repository        = "tftest"
   terraform_version = "1.3.0"
