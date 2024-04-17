@@ -19,6 +19,17 @@ resource "spacelift_stack" "frontend" {
 
 }
 
+resource "spacelift_stack" "frontend2" {
+  name       = "myproject_production_1-0_frontend2"
+  branch            = "main"
+  space_id          = "root"
+  description       = "change"
+  project_root      = "cluster"
+  repository        = "tftest"
+  terraform_version = "1.3.0"
+
+}
+
 variable "SP_CT" {
   default = {
     SPACE_FAMILY   = "myproject"
