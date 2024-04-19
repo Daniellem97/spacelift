@@ -20,3 +20,9 @@ resource "spacelift_stack_dependency_reference" "test" {
   output_name         = "DB_CONNECTION_STRING"
   input_name          = "APP_DB_URL"
 }
+
+resource "spacelift_stack_dependency_reference" "test2" {
+  stack_dependency_id = spacelift_stack_dependency.test.id
+  output_name         = "new"
+  input_name          = "new"
+}
