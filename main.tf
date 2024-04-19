@@ -1,7 +1,7 @@
 resource "spacelift_stack" "infra" {
   branch     = "main"
-  name       = "tftest"
-  repository = "core-infra"
+  name       = "infra"
+  repository = "tftest"
 }
 
 resource "spacelift_stack" "app" {
