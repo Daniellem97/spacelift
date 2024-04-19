@@ -1,56 +1,22 @@
-resource "spacelift_stack" "backend" {
-  name = "myproject_production_1-0_backend"
-  branch            = "main"
-  space_id          = "root"
-  project_root      = "cluster"
-  repository        = "tftest"
-  terraform_version = "1.3.0"
-
+resource "spacelift_stack" "infra" {
+  branch     = "main"
+  name       = "tftest"
+  repository = "core-infra"
 }
 
-resource "spacelift_stack" "frontend" {
-  name       = "myproject_production_1-0_frontend"
-  branch            = "main"
-  space_id          = "root"
-  description       = "change"
-  project_root      = "cluster"
-  repository        = "tftest"
-  terraform_version = "1.3.0"
-
+resource "spacelift_stack" "app" {
+  branch     = "main"
+  name       = "Application stack"
+  repository = "tftest"
 }
 
-variable "SP_CT" {
-  default = {
-    SPACE_FAMILY   = "myproject"
-    SPACE_NAME     = "production"
-    SPACE_VERSION  = "1-0"
-  }
+resource "spacelift_stack_dependency" "test" {
+  stack_id            = spacelift_stack.app.id
+  depends_on_stack_id = spacelift_stack.infra.id
 }
 
-variable "DEPENDENCIES" {
-  default = [
-    {
-      Src = {
-        StackName = "backend"
-      }
-      Dst = {
-        StackName = "frontend"
-      }
-    }
-  ]
-}
-
-locals {
-  STACK-DEP = distinct([for v in var.DEPENDENCIES : {
-    "SrcShort" = v["Src"]["StackName"],
-    "DstShort" = v["Dst"]["StackName"],
-    "Src"      = lower(join("_", [var.SP_CT.SPACE_FAMILY, var.SP_CT.SPACE_NAME, replace(var.SP_CT.SPACE_VERSION, ".", "-"), v["Src"]["StackName"]])),
-    "Dst"      = lower(join("_", [var.SP_CT.SPACE_FAMILY, var.SP_CT.SPACE_NAME, replace(var.SP_CT.SPACE_VERSION, ".", "-"), v["Dst"]["StackName"]])),
-  }])
-}
-
-resource "spacelift_stack_dependency" "stack-dep" {
-  for_each            = { for k, v in local.STACK-DEP : k => v }
-  depends_on_stack_id = each.value["Src"]
-  stack_id            = each.value["Dst"]
+resource "spacelift_stack_dependency_reference" "test" {
+  stack_dependency_id = spacelift_stack_dependency.test.id
+  output_name         = "DB_CONNECTION_STRING"
+  input_name          = "APP_DB_URL"
 }
