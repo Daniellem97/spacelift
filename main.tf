@@ -1,28 +1,18 @@
 resource "spacelift_stack" "infra" {
-  branch     = "main"
-  name       = "infra"
-  repository = "tftest"
+  branch     = "master"
+  name       = "Infrastructure stack"
+  repository = "core-infra"
 }
 
+
 resource "spacelift_stack" "app" {
-  branch     = "main"
+  branch     = "master"
   name       = "Application stack"
-  repository = "tftest"
+  repository = "app"
 }
 
 resource "spacelift_stack_dependency" "test" {
   stack_id            = spacelift_stack.app.id
   depends_on_stack_id = spacelift_stack.infra.id
-}
-
-resource "spacelift_stack_dependency_reference" "test" {
-  stack_dependency_id = spacelift_stack_dependency.test.id
-  output_name         = "DB_CONNECTION_STRING"
-  input_name          = "APP_DB_URL"
-}
-
-resource "spacelift_stack_dependency_reference" "test2" {
-  stack_dependency_id = spacelift_stack_dependency.test.id
-  output_name         = "new"
-  input_name          = "new"
+  trigger_always = true
 }
