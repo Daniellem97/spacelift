@@ -2,7 +2,7 @@ terraform {
   required_providers {
     spacelift = {
       source  = "spacelift.io/spacelift-io/spacelift"
-      version = "1.8.1"
+      version = "1.13.0"
     }
   }
 }
