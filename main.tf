@@ -12,7 +12,6 @@ resource "aws_db_instance" "example" {
   engine               = "mysql"
   engine_version       = "8.0.23"
   instance_class       = "db.t3.micro"
-  name                 = "exampledb"
   username             = "admin"
   password             = "password123"
   parameter_group_name = "default.mysql8.0"
