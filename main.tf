@@ -1,7 +1,7 @@
 # Spacelift Stack Resource
 resource "spacelift_stack" "example_stack" {
  github_enterprise {
-    namespace = "spacelift" # The GitHub organization / user the repository belongs to
+    namespace = "daniellem97"
   }
   name        = "example-stack1"
   repository  = "tftest"
