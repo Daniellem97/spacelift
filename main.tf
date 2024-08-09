@@ -4,7 +4,7 @@ resource "spacelift_stack" "example_stack" {
     namespace = "Daniellem97"
   }
   name        = "example-stack1"
-  repository  = "tftest"
+  repository  = "securitygroups"
   branch      = "main"
   description = "An example Spacelift stack"
 }
