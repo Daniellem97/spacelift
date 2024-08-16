@@ -22,10 +22,10 @@ resource "spacelift_stack" "this" {
 branch = "main"
 name = "labelsdebug"
 repository = "securitygroups"
-labels = var.spacelift_stack_labels
+labels            = local.labels
 }
 
-variable "spacelift_stack_labels" {
-description = "Stacks labels"
-type = set(string)
+locals {
+  labels              = ["stack:terraform"]
 }
+
