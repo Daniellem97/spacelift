@@ -14,18 +14,10 @@ resource "spacelift_context" "prod-k8s-ie" {
   name        = "Production cluster (Ireland)"
 }
 
-resource "spacelift_stack" "this" {
- github_enterprise {
-    namespace = "Daniellem97"
-  }
-
-branch = "main"
-name = "labelsdebug"
-repository = "securitygroups"
-labels            = local.labels
-}
-
-locals {
-  labels              = ["stack:terraform"]
+resource "spacelift_environment_variable" "core-kubeconfig" {
+  stack_id    = "example_stack"
+  name        = "KUBECONFIG"
+  value       = "/project/spacelift/kubeconfig"
+  write_only  = false
 }
 
