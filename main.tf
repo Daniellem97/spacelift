@@ -9,7 +9,7 @@ resource "spacelift_stack" "example_stack" {
   description = "An example Spacelift stack"
 }
 
-resource "spacelift_policy" "test modification" {
+resource "spacelift_policy" "test_modification" {
   name = "Let's not deploy any changes over the weekend"
   body = file("./policies/login.rego")
   type = "LOGIN"
