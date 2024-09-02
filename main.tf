@@ -14,10 +14,11 @@ resource "spacelift_context" "prod-k8s-ie" {
   name        = "Production clusters (Ireland)"
 }
 
-resource "spacelift_environment_variable" "core-kubeconfig" {
-  stack_id    = "example_stack"
+resource "spacelift_environment_variable" "ireland-kubeconfig" {
+  context_id  = "prod-k8s-ie"
   name        = "KUBECONFIG"
   value       = "/project/spacelift/kubeconfig"
   write_only  = false
+  description = "Kubeconfig for Ireland Kubernetes cluster"
 }
 
