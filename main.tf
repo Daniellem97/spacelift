@@ -11,7 +11,7 @@ resource "spacelift_stack" "example_stack" {
 
 resource "spacelift_context" "prod-k8s-ie" {
   description = "Configuration details for the compute cluster in 🇮🇪"
-  name        = "Production cluster (Ireland)"
+  name        = "Production clusters (Ireland)"
 }
 
 resource "spacelift_environment_variable" "core-kubeconfig" {
