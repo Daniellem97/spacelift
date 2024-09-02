@@ -1,4 +1,3 @@
 package spacelift
 
-allow 
-sample {true}
+sample := true
