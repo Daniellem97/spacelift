@@ -14,3 +14,4 @@ resource "spacelift_policy" "test_modification" {
   body = file("./policies/login.rego")
   type = "LOGIN"
 }
+
