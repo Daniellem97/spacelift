@@ -32,6 +32,15 @@ output "name1_test2_id" {
   value = data.terraform_remote_state.debugtest.outputs.projects.name1_test2.id
 }
 
+variable "project_description" {
+  default = "Project ID: ${data.terraform_remote_state.debugtest.outputs.projects.name1_test2.id}, Full ID: ${data.terraform_remote_state.debugtest.outputs.projects.name1_test2.id_full}"
+}
+
+output "description_output" {
+  value = var.project_description
+}
+
+
 output "name1_test3_number" {
   value = data.terraform_remote_state.debugtest.outputs.projects.name1_test3.number
 }
