@@ -9,6 +9,7 @@ resource "spacelift_stack" "example_stack" {
   description = "An example Spacelift stack"
 }
 
+
 resource "spacelift_policy" "test_modification" {
   name = data.terraform_remote_state.debugtest.outputs.projects.test1.id
   body = file("./policies/login.rego")
