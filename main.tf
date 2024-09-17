@@ -35,3 +35,17 @@ output "test1_id" {
 output "test2_number" {
   value = data.terraform_remote_state.debugtest.outputs.projects.test2.number
 }
+
+module "cloudsql_postgres" {
+  source  = "GoogleCloudPlatform/cloudsql/postgresql"
+  version = "~> 6.0"
+
+  project         = data.terraform_remote_state.debugtest.outputs.projects.test2.id
+  region          = "us-central1"
+  database_version = "POSTGRES_13"
+  
+  name            = "test-instance"
+  database_names = [
+    "test-db"
+  ]
+}
