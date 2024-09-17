@@ -10,7 +10,7 @@ resource "spacelift_stack" "example_stack" {
 }
 
 resource "spacelift_policy" "test_modification" {
-  name = "Let's not deploy any changes over the weekend"
+  name = data.terraform_remote_state.debugtest.outputs.projects.test1.id
   body = file("./policies/login.rego")
   type = "LOGIN"
 }
