@@ -28,15 +28,14 @@ data "terraform_remote_state" "debugtest" {
   }
 }
 
-output "name1_test2_id" {
-  value = data.terraform_remote_state.debugtest.outputs.projects.name1_test2.id
+output "test1_id" {
+  value = data.terraform_remote_state.debugtest.outputs.projects.test1.id
 }
 
-
-output "name1_test3_number" {
-  value = data.terraform_remote_state.debugtest.outputs.projects.name1_test3.number
+output "test2_number" {
+  value = data.terraform_remote_state.debugtest.outputs.projects.test2.number
 }
 
 output "description_output" {
-  value = data.terraform_remote_state.debugtest.outputs.projects.name1_test2.id
+  value = data.terraform_remote_state.debugtest.outputs.projects.test1.id
 }
