@@ -35,7 +35,3 @@ output "test1_id" {
 output "test2_number" {
   value = data.terraform_remote_state.debugtest.outputs.projects.test2.number
 }
-
-output "description_output" {
-  value = data.terraform_remote_state.debugtest.outputs.projects.test1.id
-}
