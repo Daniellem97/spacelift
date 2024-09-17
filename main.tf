@@ -14,3 +14,24 @@ resource "spacelift_policy" "test_modification" {
   body = file("./policies/login.rego")
   type = "LOGIN"
 }
+
+data "terraform_remote_state" "debugtest" {
+  backend = "remote"
+
+  config = {
+    hostname     = "spacelift.io"
+    organization = "daniellem97"
+
+    workspaces = {
+      name = "debugtest"
+    }
+  }
+}
+
+output "name1_test2_id" {
+  value = data.terraform_remote_state.debugtest.outputs.projects.name1_test2.id
+}
+
+output "name1_test3_number" {
+  value = data.terraform_remote_state.debugtest.outputs.projects.name1_test3.number
+}
