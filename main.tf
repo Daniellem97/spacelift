@@ -15,3 +15,4 @@ resource "spacelift_terraform_provider" "provider" {
   space_id    = "root"
   description = "Explain what this is for"
 }
+
