@@ -1,7 +1,7 @@
 # Spacelift Stack Resource
 resource "spacelift_stack" "example_stack" {
  github_enterprise {
-    namespace = "Daniellem97"
+    namespace = "Daniellem97space"
   }
   name        = "example-stack1"
   repository  = "securitygroups"
