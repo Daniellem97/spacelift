@@ -24,3 +24,16 @@ resource "spacelift_stack" "ansible_tableau_update_os" {
   space_id    = "testnoinheritance-01J82YD2J1E8BRQAR8E1WS3075"
   repository   = "securitygroups"
 }
+
+import {
+  to = spacelift_stack.stacka§
+  id = "stacka"
+}
+
+resource "spacelift_stack" "stacka" {
+  branch     = "master"
+  name       = "stacka"
+  repository = "addressbook"
+}
+
+
