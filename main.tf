@@ -24,3 +24,19 @@ resource "spacelift_stack" "ansible_tableau_update_os" {
   space_id    = "testnoinheritance-01J82YD2J1E8BRQAR8E1WS3075"
   repository   = "securitygroups"
 }
+
+resource "spacelift_stack" "this" {
+ github_enterprise {
+    namespace = "Daniellem97"
+  }
+
+branch = "main"
+name = "labelsdebug"
+repository = "securitygroups"
+labels = var.spacelift_stack_labels
+}
+
+variable "spacelift_stack_labels" {
+description = "Stacks labels"
+type = set(string)
+}
