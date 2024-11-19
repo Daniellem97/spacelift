@@ -24,3 +24,8 @@ resource "spacelift_stack" "ansible_tableau_update_os" {
   space_id    = "testnoinheritance-01J82YD2J1E8BRQAR8E1WS3075"
   repository   = "securitygroups"
 }
+
+provider "google" {
+  project     = "data.terraform_remote_state.debugtest.outputs.projects.test1.id"
+  region      = "us-central1"
+}
