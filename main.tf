@@ -11,6 +11,7 @@ resource "spacelift_stack" "example_stack" {
   description = "An example Spacelift stack"
 }
 
+
 resource "spacelift_stack" "ansible_tableau_update_os" {
   ansible {
     playbook = "output.tf"
