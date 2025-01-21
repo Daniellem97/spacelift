@@ -25,3 +25,14 @@ resource "spacelift_stack" "ansible_tableau_update_os" {
   space_id    = "testnoinheritance-01J82YD2J1E8BRQAR8E1WS3075"
   repository   = "securitygroups"
 }
+
+resource "spacelift_module" "main" {
+  repository = "tf-test"
+  branch     = "main"
+  name         = "plswork"
+
+  github_enterprise {
+    namespace = "Daniellem97"
+    id        = "397473"
+  }
+} 
