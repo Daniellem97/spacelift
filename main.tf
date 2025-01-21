@@ -33,6 +33,6 @@ resource "spacelift_stack" "testwithstack" {
 
   github_enterprise {
     namespace = "Daniellem97"
-    id        = "397473"
+    id        = "397,473"
   }
 } 
