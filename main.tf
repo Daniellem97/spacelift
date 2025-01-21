@@ -26,7 +26,7 @@ resource "spacelift_stack" "ansible_tableau_update_os" {
   repository   = "securitygroups"
 }
 
-resource "spacelift_module" "main" {
+resource "spacelift_stack" "testwithstack" {
   repository = "tf-test"
   branch     = "main"
   name         = "plswork"
