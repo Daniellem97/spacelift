@@ -27,11 +27,12 @@ resource "spacelift_stack" "ansible_tableau_update_os" {
 }
 
 resource "spacelift_stack" "testwithstack" {
-  repository = "tf-test"
+  repository = "tftest"
   branch     = "main"
   name         = "plswork"
 
   github_enterprise {
     namespace = "Daniellem97"
+    id        = "397473"
   }
 } 
