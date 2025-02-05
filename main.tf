@@ -4,10 +4,10 @@ resource "spacelift_stack" "terragrunt-stack" {
     terragrunt_version     = "0.55.15"
     use_run_all            = false
     use_smart_sanitization = true
-    space­_id = "production-01JAWQ7K45F8TDK53CKN6GDV85"
     tool                   = "OPEN_TOFU"
   }
 
+  space­_id = "production-01JAWQ7K45F8TDK53CKN6GDV85"
   autodeploy   = true
   branch       = "main"
   name         = "Terragrunt stack example"
