@@ -7,7 +7,7 @@ resource "spacelift_stack" "terragrunt-stack" {
     tool                   = "OPEN_TOFU"
   }
 
-  space­_id = "production-01JAWQ7K45F8TDK53CKN6GDV85"
+  space­ = "production-01JAWQ7K45F8TDK53CKN6GDV85"
   autodeploy   = true
   branch       = "main"
   name         = "Terragrunt stack example"
