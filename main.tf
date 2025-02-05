@@ -6,8 +6,6 @@ resource "spacelift_stack" "terragrunt-stack" {
     use_smart_sanitization = true
     tool                   = "OPEN_TOFU"
   }
-
-  space­ = "production-01JAWQ7K45F8TDK53CKN6GDV85"
   autodeploy   = true
   branch       = "main"
   name         = "Terragrunt stack example"
