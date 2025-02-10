@@ -3,6 +3,6 @@ resource "spacelift_audit_trail_webhook" "example" {
   enabled  = true
   secret   = "mysecretkey"
 lifecycle {
-    ignore_changes = "secret"
+    ignore_changes = [secret]
   }
 }
