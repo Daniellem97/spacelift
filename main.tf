@@ -11,3 +11,6 @@ resource "spacelift_stack" "example_stack" {
   description = "An example Spacelift stack with a destructor attached."
 }
 
+resource "spacelift_stack_destructor" "example_destructor" {
+  stack_id = spacelift_stack.example_stack.id
+}
