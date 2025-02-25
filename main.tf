@@ -10,3 +10,4 @@ resource "spacelift_stack" "example_stack" {
   # Description
   description = "An example Spacelift stack with a destructor attached."
 }
+
