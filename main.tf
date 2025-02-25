@@ -1,8 +1,17 @@
-resource "spacelift_audit_trail_webhook" "example" {
-  endpoint = "https://webhook.site/bc8524c1-a1fb-4204-b9b2-2eba23642508"
-  enabled  = true
-  secret   = "mysecretkey"
-lifecycle {
-    ignore_changes = [secret]
-  }
+
+# Spacelift Stack Definition
+resource "spacelift_stack" "example_stack" {
+  name             = "example-stack-1-worker"
+  repository       = "tftest"
+  branch           = "main"
+  terraform_version = "1.5.0"
+  # Auto-deploy on changes
+  autodeploy = true
+  # Description
+  description = "An example Spacelift stack with a destructor attached."
+}
+
+# Spacelift Stack Destructor
+resource "spacelift_stack_destructor" "example_destructor" {
+  stack_id = spacelift_stack.example_stack.id
 }
