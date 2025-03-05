@@ -1,9 +1,12 @@
-resource "spacelift_stack" "example" {
-  name         = "environmentvariablecontext"
-  description  = "A stack to show the environment variable priority"
-  branch       = "main"
-  raw_git {
-    url        = "https://github.com/spacelift-io/terraform-provider-spacelift"
-    branch     = "main"
+resource "spacelift_stack" "example_stack" {
+ github {
+    id = "github-enterprise-default-integration"
+    namespace = "Daniellem97"
   }
+  name        = "example-stack"
+  repository  = "securitygroups"
+  branch      = "main"
+  space_id    = "testnoinheritance-01J82YD2J1E8BRQAR8E1WS3075"
+  github_action_deploy = false
+  description = "An example Spacelift stack"
 }
