@@ -1,5 +1,5 @@
 resource "spacelift_stack" "example_stack" {
- github {
+ github_enterprise {
     id = "github-enterprise-default-integration"
     namespace = "Daniellem97"
   }
