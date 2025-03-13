@@ -10,3 +10,4 @@ resource "spacelift_stack" "example_stack" {
   github_action_deploy = false
   description = "An example Spacelift stack"
 }
+
