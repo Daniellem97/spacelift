@@ -10,3 +10,12 @@ resource "spacelift_stack" "example_stack" {
   github_action_deploy = false
   description = "An example Spacelift stack"
 }
+
+resource "aws_s3_bucket" "example" {
+  bucket = "ewoifh0ehf0pqf"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
