@@ -11,12 +11,12 @@ resource "spacelift_stack" "example_stack" {
   description = "An example Spacelift stack"
 }
 
-resource "spacelift_context" "test_context" {
+resource "spacelift_context" "test324_context" {
   name        = "Production cluster (Ireland)"
   labels = ["test"]
 }
 
-resource "spacelift_context_attachment" "test_attachment" {
+resource "spacelift_context_attachment" "test324_attachment" {
   context_id = "test_context"
   stack_id   = "example_stack"
 }
