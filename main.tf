@@ -13,7 +13,7 @@ resource "spacelift_stack" "example_stack" {
 
 resource "spacelift_context" "test_context" {
   name        = "Production cluster (Ireland)"
-  labels = "test"
+  labels = ["test"]
 }
 
 resource "spacelift_context_attachment" "test_attachment" {
