@@ -10,3 +10,13 @@ resource "spacelift_stack" "example_stack" {
   github_action_deploy = false
   description = "An example Spacelift stack"
 }
+
+resource "spacelift_context" "test_context" {
+  name        = "Production cluster (Ireland)"
+  label = "test"
+}
+
+resource "spacelift_context_attachment" "test_attachment" {
+  context_id = "test_context"
+  stack_id   = "example_stack"
+}
