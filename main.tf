@@ -18,5 +18,5 @@ resource "spacelift_context" "test324_context" {
 
 resource "spacelift_context_attachment" "test324_attachment" {
   context_id = "test324_context"
-  stack_id   = "example_stack"
+  stack_id   = "example-stack"
 }
