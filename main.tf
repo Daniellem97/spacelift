@@ -10,10 +10,7 @@ resource "spacelift_module" "from_csv" {
 
   name        = each.value.module_name
   description = "Terraform module for ${each.value.project}"
-
-  # Optional fields depending on your setup
-  repository = each.value.repository_creation_required == "true" ? each.value.module_name : null
-
-  # Add other optional fields if necessary
-  labels = [each.value.project]
+  branch      = "main"
+  repository  = "testmultimodule"
+  labels      = [each.value.project]
 }
