@@ -1,0 +1,4 @@
+module_name,project,repository_creation_required,spacelift_module_required
+terraform-wiz-cicd-scanpolicy,Information Systems,true,true
+terraform-database,Data Platform,false,true
+terraform-legacy-networking,IT Operations,false,false
