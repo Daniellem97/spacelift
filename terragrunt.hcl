@@ -1,3 +1,1 @@
-terraform {
-  source = "./modules/example"
-}
+
