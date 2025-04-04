@@ -1,4 +1,4 @@
 resource "spacelift_space" "development" {
-  name = "development2"
+  name = "development3"
   parent_space_id = "root"
 }
