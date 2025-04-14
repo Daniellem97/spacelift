@@ -1,10 +1,10 @@
 resource "spacelift_mounted_file" "ireland-kubeconfig" {
-  context_id    = "prod-k8s-ie"
+  context_id    = "prod-k8s-ie.id"
   relative_path = "/terraform.tfvars"
   content = base64encode("aws_region = \"us-east-1\"")
   write_only = false
  depends_on = [
-    spacelift_context.prod-k8s-ie
+    spacelift_context.prod-k8s-ie.id
   ]
 }
 
