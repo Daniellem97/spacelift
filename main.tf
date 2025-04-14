@@ -1,7 +1,7 @@
 resource "spacelift_mounted_file" "ireland-kubeconfig" {
   context_id    = spacelift_context.prod_k8s_ie.id
   relative_path = "source/terraform.auto.tfvars"
-  content = base64encode("TF_VAR_environment = \"whatever\"")
+  content = base64encode("environment = \"whatever\"")
   write_only = false
 }
 
