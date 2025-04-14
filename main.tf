@@ -3,7 +3,11 @@ resource "spacelift_mounted_file" "ireland-kubeconfig" {
   relative_path = "/terraform.tfvars"
   content = base64encode("aws_region = \"us-east-1\"")
   write_only = false
+ depends_on = [
+    spacelift_context.prod-k8s-ie
+  ]
 }
+
 
 resource "spacelift_context" "prod-k8s-ie" {
   description = "Configuration details for the compute cluster in 🇮🇪"
