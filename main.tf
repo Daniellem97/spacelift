@@ -19,7 +19,7 @@ before_init = [
 
 resource "spacelift_aws_integration" "this" {
   name = "newtestawsmove"
-  space_id = "legacy"
+  space_id = "root"
   # We need to set the ARN manually rather than referencing the role to avoid a circular dependency
   role_arn                       = var.aws_arn
   generate_credentials_in_worker = false
