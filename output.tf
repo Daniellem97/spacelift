@@ -8,3 +8,4 @@ output "random_string_output" {
   value       = random_string.example.result
 }
 
+
