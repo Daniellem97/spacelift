@@ -11,7 +11,8 @@ resource "spacelift_module" "k8s-module" {
   administrative     = true
   branch             = "main"
   description        = "Infra terraform module"
-  repository         = "tftest"
+  repository         = "testmultimodule"
+  project_root       = "pet"
   public             = "true"
 }
 
