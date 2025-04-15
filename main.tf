@@ -16,6 +16,7 @@ resource "spacelift_module" "k8s-module" {
   public             = "true"
 }
 
+
 resource "spacelift_context" "prod_k8s_ie" {
   description = "Configuration details for the compute cluster in 🇮🇪"
   name        = "Production cluster (Ireland)"
