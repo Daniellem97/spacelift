@@ -5,6 +5,15 @@ resource "spacelift_mounted_file" "ireland-kubeconfig" {
   write_only = false
 }
 
+resource "spacelift_module" "k8s-module" {
+  name               = "k8s-module"
+  terraform_provider = "aws"
+  administrative     = true
+  branch             = "master"
+  description        = "Infra terraform module"
+  repository         = "tftest"
+  public             = "true"
+}
 
 resource "spacelift_context" "prod_k8s_ie" {
   description = "Configuration details for the compute cluster in 🇮🇪"
