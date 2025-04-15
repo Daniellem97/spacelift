@@ -13,7 +13,7 @@ resource "spacelift_module" "k8s-module" {
   description        = "Infra terraform module"
   repository         = "testmultimodule"
   project_root       = "pet"
-  public             = "true"
+  public             = "false"
 }
 
 resource "spacelift_context" "prod_k8s_ie" {
