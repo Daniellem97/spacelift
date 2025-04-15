@@ -16,3 +16,15 @@ before_init = [
     "mv /mnt/workspace/source/terraform.auto.tfvars \"/mnt/workspace/source/$TF_VAR_spacelift_project_root/terraform.auto.tfvars\""
   ]
 }
+
+resource "spacelift_aws_integration" "this" {
+  name = "newtestawsmove"
+  space_id = "legacy"
+  # We need to set the ARN manually rather than referencing the role to avoid a circular dependency
+  role_arn                       = var.aws_arn
+  generate_credentials_in_worker = false
+}
+
+variable "aws_arn" {
+  type = string
+}
