@@ -38,3 +38,8 @@ resource "spacelift_aws_integration" "this" {
 variable "aws_arn" {
   type = string
 }
+
+provider "google" {
+  project     = "data.terraform_remote_state.debugtest.outputs.projects.test1.id"
+  region      = "us-central1"
+}
