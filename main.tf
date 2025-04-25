@@ -38,3 +38,4 @@ resource "spacelift_aws_integration" "this" {
 variable "aws_arn" {
   type = string
 }
+
