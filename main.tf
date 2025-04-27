@@ -38,3 +38,14 @@ resource "spacelift_aws_integration" "this" {
 variable "aws_arn" {
   type = string
 }
+
+resource "spacelift_stack" "stacka" {
+  branch     = "master"
+  name       = "stacka"
+  repository = "addressbook"
+}
+
+import {
+  id = "stacka"
+  to = spacelift_stack.stacka2
+}
