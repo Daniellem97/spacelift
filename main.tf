@@ -38,3 +38,12 @@ resource "spacelift_aws_integration" "this" {
 variable "aws_arn" {
   type = string
 }
+
+resource "aws_s3_bucket" "example" {
+  bucket = "ewoifh0ehf0pqf"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
