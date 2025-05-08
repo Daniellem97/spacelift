@@ -1,3 +1,11 @@
+module "moduletest" {
+  source  = "us.spacelift.io/daniellem97/moduletest/default"
+  version = "0.3.10"
+
+  # Optional inputs
+  # version_number = string
+}
+
 resource "spacelift_mounted_file" "ireland-kubeconfig" {
   context_id    = spacelift_context.prod_k8s_ie.id
   relative_path = "source/terraform.auto.tfvars"
