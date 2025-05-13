@@ -13,6 +13,7 @@ resource "spacelift_mounted_file" "ireland-kubeconfig" {
   write_only = false
 }
 
+
 resource "spacelift_module" "k8s-module" {
   name               = "k8s-module"
   terraform_provider = "aws"
