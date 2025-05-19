@@ -5,6 +5,7 @@ resource "spacelift_mounted_file" "ireland-kubeconfig" {
   write_only = false
 }
 
+
 resource "spacelift_policy" "trigger_only_stacks_project_root" {
   name     = "trigger only stacks project root"
   type     = "GIT_PUSH" 
