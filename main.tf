@@ -7,7 +7,7 @@ resource "spacelift_mounted_file" "ireland-kubeconfig" {
 
 resource "spacelift_policy" "trigger_only_stacks_project_root" {
   name     = "trigger only stacks project root"
-  type     = "trigger" 
+  type     = "TRIGGER" 
   body     = file("test.rego")
   space_id = "root"  # or whatever space ID you use
 }
