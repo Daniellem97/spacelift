@@ -5,21 +5,7 @@ resource "spacelift_mounted_file" "ireland-kubeconfig" {
   write_only = false
 }
 
-resource "spacelift_policy" "trigger_only_stacks_project_root" {
-  name     = "trigger only stacks project root"
-  type     = "GIT_PUSH" 
-  body     = file("test.rego")
-  space_id = "root"  # or whatever space ID you use
-}
 
-import {
-  to = spacelift_policy.trigger_only_stacks_project_root
-  id = "trigger-only-stacks-project-root"
-}
-
-data "spacelift_policy" "debug" {
-  policy_id = "allow-forks" 
-}
 
 resource "spacelift_module" "k8s-module" {
   name               = "k8s-module"
