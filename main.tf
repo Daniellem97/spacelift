@@ -17,6 +17,10 @@ import {
   id = "trigger-only-stacks-project-root"
 }
 
+data "spacelift_policy" "debug" {
+  policy_id = "allow-forks" 
+}
+
 resource "spacelift_module" "k8s-module" {
   name               = "k8s-module"
   terraform_provider = "aws"
