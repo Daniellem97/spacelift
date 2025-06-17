@@ -48,11 +48,11 @@ resource "spacelift_module" "k8s-module" {
   public             = "true"
 }
 
-resource "spacelift_idp_group_mapping" "example" {
-  idp_group_id = "example-group-id"
-
+resource "spacelift_idp_group_mapping" "test" {
+  name = "test"
   policy {
-    space_id   = "root"
-    role = "read"
+    space_id = "root"
+    role     = "ADMIN"
   }
+  description = "test description"
 }
