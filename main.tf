@@ -28,4 +28,8 @@ resource "spacelift_idp_group_mapping" "test" {
     space_id = "root"
     role     = "ADMIN"
   }
+ policy {
+    space_id = "metabasetest-01JPQM3E86ETE2TKCNXVD2MEH1"
+    role     = "ADMIN"
+  }
 }
