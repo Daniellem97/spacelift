@@ -48,13 +48,11 @@ resource "spacelift_module" "k8s-module" {
   public             = "true"
 }
 
-resource "spacelift_context" "prod_k8s_ie" {
-  description = "Configuration details for the compute cluster in 🇮🇪"
-  name        = "Production cluster (Ireland)"
-  space_id    = "legacy"
-  labels       = ["autoattach:aws"]
-before_init = [
-    "mkdir -p \"/mnt/workspace/source/$TF_VAR_spacelift_project_root\"",
-    "mv /mnt/workspace/source/terraform.auto.tfvars \"/mnt/workspace/source/$TF_VAR_spacelift_project_root/terraform.auto.tfvars\""
-  ]
+resource "spacelift_idp_group_mapping" "example" {
+  idp_group_id = "example-group-id"
+
+  policy {
+    space_id   = "root"
+    role = "read"
+  }
 }
