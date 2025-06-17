@@ -28,5 +28,4 @@ resource "spacelift_idp_group_mapping" "test" {
     space_id = "root"
     role     = "ADMIN"
   }
-  description = "test description"
 }
