@@ -22,18 +22,6 @@ resource "spacelift_module" "k8s-module" {
   public             = "true"
 }
 
-resource "spacelift_idp_group_mapping" "test" {
-  name = "test"
-  policy {
-    space_id = "root"
-    role     = "ADMIN"
-  }
- policy {
-    space_id = "metabasetest-01JPQM3E86ETE2TKCNXVD2MEH1"
-    role     = "ADMIN"
-  }
-}
-
 locals {
   spaces_chunk_1 = {
     for i in range(0, 1024) :
