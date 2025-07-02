@@ -37,7 +37,7 @@ resource "spacelift_idp_group_mapping" "test" {
 variable "spaces" {
   type = map(string)
   default = {
-    for i in range(3600) =>
+    for i in range(3600) :
     format("space-%04d", i) => "This is space number ${i}"
   }
 }
