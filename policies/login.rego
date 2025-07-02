@@ -1,3 +1,0 @@
-package spacelift
-
-sample := true
