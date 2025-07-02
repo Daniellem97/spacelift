@@ -34,16 +34,15 @@ resource "spacelift_idp_group_mapping" "test" {
   }
 }
 
-variable "spaces" {
-  type = map(string)
-  default = {
+locals {
+  spaces = {
     for i in range(3600) :
     format("space-%04d", i) => "This is space number ${i}"
   }
 }
 
 resource "spacelift_space" "many_spaces" {
-  for_each        = var.spaces
+  for_each        = local.spaces
   name            = each.key
   parent_space_id = "root"
   description     = each.value
