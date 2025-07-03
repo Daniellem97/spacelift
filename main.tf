@@ -1,7 +1,7 @@
 resource "spacelift_stack" "k8s_cluster2" {
   administrative    = true
   autodeploy        = true
-  branch            = "master"
+  branch            = "main"
   description       = "Provisions a Kubernetes cluster"
   name              = "Kubernetes Cluster"
   project_root      = "cluster"
