@@ -5,7 +5,7 @@ resource "spacelift_stack" "k8s_cluster2" {
   description       = "Provisions a Kubernetes cluster"
   name              = "Kubernetes Cluster"
   project_root      = "cluster"
-  repository        = "core-infra"
+  repository        = "tftest"
   terraform_version = "1.3.0"
 }
 
