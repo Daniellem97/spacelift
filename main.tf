@@ -15,11 +15,3 @@ resource "spacelift_environment_variable" "credentials" {
   value      = "REDACTED"
   write_only = true
 }
-
-resource "spacelift_stack_destructor" "k8s_cluster_destructor" {
-  depends_on = [
-    spacelift_environment_variable.credentials,
-  ]
-
-  stack_id = spacelift_stack.k8s_cluster2.id
-}
