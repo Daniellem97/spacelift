@@ -21,5 +21,5 @@ resource "spacelift_stack_destructor" "k8s_cluster_destructor" {
     spacelift_environment_variable.credentials,
   ]
 
-  stack_id = spacelift_stack.k8s_cluster.id
+  stack_id = spacelift_stack.k8s_cluster2.id
 }
