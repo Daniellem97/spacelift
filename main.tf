@@ -17,7 +17,7 @@ resource "spacelift_stack" "k8s_cluster3" {
   name              = "Kubernetes Cluster 3 "
   project_root      = "cluster"
   repository        = "tftest"
-  terraform_version = "1.3.3"
+  terraform_version = "1.3.2"
 }
 
 resource "spacelift_stack" "k8s_cluster4" {
