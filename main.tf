@@ -30,10 +30,3 @@ resource "spacelift_stack" "k8s_cluster4" {
   repository        = "tftest"
   terraform_version = "1.3.3"
 }
-
-resource "spacelift_environment_variable" "credentials" {
-  stack_id   = spacelift_stack.k8s_cluster2.id
-  name       = "AWS_CREDENTIALS"
-  value      = "REDACTED"
-  write_only = true
-}
