@@ -1,9 +1,9 @@
-resource "spacelift_stack" "k8s_cluster2" {
+resource "spacelift_stack" "k8s_cluster9" {
   administrative    = true
   autodeploy        = true
   branch            = "main"
   description       = "Provisions a Kubernetes cluster"
-  name              = "Kubernetes Cluster"
+  name              = "Kubernetes Cluster 2"
   project_root      = "cluster"
   repository        = "tftest"
   terraform_version = "1.3.3"
@@ -14,7 +14,7 @@ resource "spacelift_stack" "k8s_cluster3" {
   autodeploy        = true
   branch            = "main"
   description       = "Provisions a Kubernetes cluster"
-  name              = "Kubernetes Cluster"
+  name              = "Kubernetes Cluster 3 "
   project_root      = "cluster"
   repository        = "tftest"
   terraform_version = "1.3.3"
@@ -25,7 +25,7 @@ resource "spacelift_stack" "k8s_cluster4" {
   autodeploy        = true
   branch            = "main"
   description       = "Provisions a Kubernetes cluster"
-  name              = "Kubernetes Cluster"
+  name              = "Kubernetes Cluster 4"
   project_root      = "cluster"
   repository        = "tftest"
   terraform_version = "1.3.3"
