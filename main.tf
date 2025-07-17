@@ -4,7 +4,6 @@ space_id = "root"
 repository = "tftest"
 branch = "main"
 
-terraform_version = "1.5.7"
 terraform_workflow_tool = "CUSTOM"
 terraform_smart_sanitization = true
 
