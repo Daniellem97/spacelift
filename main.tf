@@ -13,3 +13,19 @@ administrative = true
 enable_well_known_secret_masking = true
 github_action_deploy = false
 }
+
+resource "spacelift_stack" "this" {
+ github_enterprise {
+    namespace = "Daniellem97"
+  }
+
+branch = "main"
+name = "labelsdebug"
+repository = "securitygroups"
+labels = var.spacelift_stack_labels
+}
+
+variable "spacelift_stack_labels" {
+description = "Stacks labels"
+type = set(string)
+}
