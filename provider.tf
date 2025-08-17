@@ -12,7 +12,3 @@ terraform {
 }
 
 provider "spacelift" {}
-
-provider "aws" {
-  region = "us-west-2"  # You can change the region as needed
-}
