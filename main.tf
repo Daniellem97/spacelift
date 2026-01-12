@@ -13,3 +13,14 @@ administrative = true
 enable_well_known_secret_masking = true
 github_action_deploy = false
 }
+
+resource "spacelift_stack" "stacka" {
+  branch     = "master"
+  name       = "stacka"
+  repository = "addressbook"
+}
+
+import {
+  id = "stacka"
+  to = spacelift_stack.stacka2
+}
