@@ -13,3 +13,12 @@ administrative = true
 enable_well_known_secret_masking = true
 github_action_deploy = false
 }
+
+resource "aws_s3_bucket" "example" {
+  bucket = "ewoifh0ehf0pqf"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
